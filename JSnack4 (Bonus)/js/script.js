@@ -7,7 +7,8 @@ const lista_breve = [1, 2, 3, 4, 5];
 const lista_lunga = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 for (i = 0; lista_breve.length < lista_lunga.length; i++) {
-    lista_breve.push(lista_breve[i]);
+    // lista_breve.push(lista_breve[i]); non mi piace, riprovo:
+    lista_breve.push(lista_breve.length + 1);
 }
 
 console.log("lista breve: " + lista_breve);
