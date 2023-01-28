@@ -1,27 +1,36 @@
 // console.log("Hello Kikka");
 
 // JSnack2
-// Crea due tag div con due id diversi. Un div avrà il testo colorato di rosso mentre l’altro di verde.Partendo da un array di numeri, stampiamo nell’id rosso i numeri dispari e in verde i numeri pari.
+// Crea due tag div con due id diversi. Un div avrà il testo colorato di rosso mentre l’altro di verde. Partendo da un array di numeri, stampiamo nell’id rosso i numeri dispari e in verde i numeri pari.
 
 
 document.getElementById("rosso-dispari").style.color = "red";
 document.getElementById("verde-pari").style.color = "green";
 
-const array = [];
-const random_number = Math.floor(Math.random() * 10) + 1;
-// console.log(random_number);
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // console.log(numbers);
 
-for (let i = 0; i < random_number; i++) {
-    let numbers = Math.floor(Math.random() * 50) + 1;
-    array.push(numbers);
+const pari_list = [];
+const dispari_list = [];
 
-    // let numeri_dispari = (numbers % 2 == 0);
-    // console.log(numeri_dispari);
-    
-    // if (numbers % 2) {
-    //     console.log(numbers);
-    // }
+for (let i = 0; i < numbers.length; i++) {
 
+    if (numbers[i] % 2 == 0) {
+        let numeri_pari = numbers[i];
+            // console.log(numeri_pari);
+
+        pari_list.push(numeri_pari);
+    } else {
+        let numeri_dispari = numbers[i];
+            // console.log(numbers[i]);
+        
+        dispari_list.push(numeri_dispari);
+    }
+
+    // console.log(pari_list);
+    // console.log(dispari_list);
 }
 
-console.log(array); 
+document.getElementById("verde-pari").innerHTML = pari_list;
+document.getElementById("rosso-dispari").innerHTML = dispari_list;
+
