@@ -34,3 +34,7 @@ for (let i = 0; i < numbers.length; i++) {
 document.getElementById("verde-pari").innerHTML = pari_list;
 document.getElementById("rosso-dispari").innerHTML = dispari_list;
 
+
+// volendo potevo mettere numbers[i] in una variabile, serve solo per migliore leggibilità e nel caso si debba modificare l'array in futuro (è più chiaro se modifichi usando la variabile e non con numbers[i], anche se funzionerebbe ugualmente)
+
+// NOT PRETTY aggiungere tutto l'array (non si fa mai!), meglio stamapre il signolo valore con append e una , dopo :)
